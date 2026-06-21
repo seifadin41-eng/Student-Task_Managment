@@ -2,9 +2,10 @@
   "version": 2,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "student-task-manager/client/dist",
+  "public": "student-task-manager/client/dist",
   "routes": [
     {
-      "src": "/[^.]+",
+      "src": "^/(?!.*\\..*$|_next/static|_next/image|favicon.ico).*$",
       "dest": "/index.html"
     }
   ]
